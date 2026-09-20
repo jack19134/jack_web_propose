@@ -1,10 +1,39 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>My Small Web</title>
-  </head>
-  <body>
-    <h1>Hello, world!</h1>
-    <p>This is my first GitHub Pages site.</p>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Proposal Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #ffe6f0;
+      margin-top: 100px;
+    }
+    h1 {
+      color: #d6336c;
+    }
+    button {
+      font-size: 18px;
+      padding: 10px 20px;
+      margin: 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .yes {
+      background-color: #ff4d6d;
+      color: white;
+    }
+    .notready {
+      background-color: #ccc;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <h1>Will you be my girlfriend?</h1>
+  <button class="yes" onclick="alert('Yay! You said YES!! ❤️')">Yes!!</button>
+  <button class="notready" onclick="alert('It’s okay, I’ll wait 💕')">Eh... I’m not ready yet</button>
+</body>
 </html>
