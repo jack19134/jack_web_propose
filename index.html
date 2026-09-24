@@ -13,13 +13,23 @@
       align-items: center;
       justify-content: center;
       font-family: "Segoe UI", Tahoma, sans-serif;
-      background:
-        linear-gradient(rgba(255, 178, 210, 0.3), rgba(255, 234, 243, 0.22)),
-        url("Untitled-1.png") center/cover no-repeat fixed;
+      background: linear-gradient(rgba(255, 178, 210, 0.22), rgba(255, 234, 243, 0.18));
       color: #fff5f7;
       overflow: hidden;
       position: relative;
       padding: 20px;
+    }
+
+    .page-bg {
+      position: fixed;
+      inset: 0;
+      background-image: url("Untitled-1.png");
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-attachment: scroll;
+      filter: saturate(1.1) brightness(0.82);
+      z-index: 0;
     }
 
     body::before {
@@ -31,6 +41,8 @@
         radial-gradient(circle at 80% 25%, rgba(255, 194, 214, 0.7) 0, transparent 20%),
         radial-gradient(circle at 50% 80%, rgba(253, 211, 225, 0.8) 0, transparent 22%);
       pointer-events: none;
+      z-index: 1;
+      opacity: 0.9;
     }
 
     .heart-bg {
@@ -132,6 +144,16 @@
       letter-spacing: 0.02em;
     }
 
+    h3 {
+      position: relative;
+      z-index: 1;
+      margin: 0 0 10px;
+      font-size: 1rem;
+      color: #fc4f80;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+    }
+
     .buttons {
       position: relative;
       z-index: 1;
@@ -199,7 +221,7 @@
       z-index: 1;
       margin-top: 22px;
       font-size: 0.87rem;
-      color: rgba(255, 255, 255, 0.85);
+      color: #fc4f80;
       letter-spacing: 0.05em;
     }
 
@@ -207,6 +229,12 @@
       body {
         padding: 14px;
         overflow: auto;
+      }
+
+      .page-bg {
+        background-size: cover;
+        background-position: center center;
+        background-attachment: scroll;
       }
 
       .card {
@@ -255,6 +283,8 @@
   </style>
 </head>
 <body>
+  <div class="page-bg" aria-hidden="true"></div>
+
   <div class="heart-bg" aria-hidden="true">
     <span style="left: 8%; animation-delay: 0s;"></span>
     <span style="left: 18%; animation-delay: 1.4s;"></span>
