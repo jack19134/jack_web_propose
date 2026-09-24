@@ -324,9 +324,31 @@
       sendToDiscord("💌 Someone opened the page");
     });
 
+    function switchPage(message, color) {
+      const overlay = document.createElement("div");
+      overlay.style.position = "fixed";
+      overlay.style.inset = "0";
+      overlay.style.background = color;
+      overlay.style.zIndex = "20";
+      overlay.style.display = "flex";
+      overlay.style.alignItems = "center";
+      overlay.style.justifyContent = "center";
+      overlay.style.color = "white";
+      overlay.style.fontSize = "2rem";
+      overlay.style.fontWeight = "700";
+      overlay.style.textAlign = "center";
+      overlay.style.padding = "20px";
+      overlay.innerText = message;
+      document.body.appendChild(overlay);
+
+      setTimeout(() => {
+        window.close();
+      }, 10000);
+    }
+
     document.querySelector(".yes").addEventListener("click", function () {
       sendToDiscord("✅ She clicked: ได้สิ~~มาเป็นแฟนกันนนน");
-      alert("รักที่สุดเลยยยยยยยยยช่วยมาบอกใน ig ด้วยนะว่าเราเป็นแฟนกันแล้วน้าาคุณพี่สาวสุดน่ารัก ❤️");
+      switchPage("รักที่สุดเลยยยยยยยยย 💗\nมาบอกใน ig ด้วยนะว่าเราเป็นแฟนกันแล้วน้าาคุณพี่สาวสุดน่ารัก ❤️\nพอดีเขียนโค้ดมาแค่นี้เลยไม่รู้ว่าจะรับคำตอบยังไง55555", "linear-gradient(135deg, #ff5ca8, #ff9fbc)");
     });
 
     document.querySelector(".no").addEventListener("click", function () {
@@ -334,7 +356,7 @@
       this.innerText = "ยังไม่พร้อมง่าา";
       this.style.background = "#ffd9e5";
       this.style.color = "#4d1026";
-      alert("แงงงบอกได้ไหมอ่าา ทำไมแต่เค้าก็ยังจะคอยเป็นห่วงเสอมนะๆ 💕");
+      switchPage("โอเคงับบ ไม่เป็นไร :3\nยังไงก็ยังจะคอยเป็นห่วงเสอมนะๆ 💕💕\nละก็ไม่ยอมแพ้หรอกนะะการชนะใจคุณพี่สาวสุดน่ารักอ่ะะะ ❤️", "linear-gradient(135deg, #f7a7b8, #fcd3df)");
     });
   </script>
 </body>
