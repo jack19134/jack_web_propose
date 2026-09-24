@@ -19,6 +19,7 @@
       color: #fff5f7;
       overflow: hidden;
       position: relative;
+      padding: 20px;
     }
 
     body::before {
@@ -203,16 +204,52 @@
     }
 
     @media (max-width: 560px) {
+      body {
+        padding: 14px;
+        overflow: auto;
+      }
+
       .card {
-        padding: 38px 20px 30px;
+        width: min(94vw, 420px);
+        padding: 28px 16px 24px;
+        border-radius: 25px;
+      }
+
+      .card::before {
+        inset: 8px;
+        border-radius: 18px;
+      }
+
+      .emoji {
+        width: 58px;
+        height: 58px;
+      }
+
+      h1 {
+        font-size: clamp(1.8rem, 7vw, 2.6rem);
+      }
+
+      h2 {
+        font-size: clamp(1rem, 4.8vw, 1.4rem);
+      }
+
+      h3 {
+        font-size: 0.82rem;
       }
 
       .buttons {
         flex-direction: column;
+        gap: 12px;
       }
 
       button {
         width: 100%;
+        font-size: 0.95rem;
+        padding: 14px 18px;
+      }
+
+      .small-text {
+        font-size: 0.75rem;
       }
     }
   </style>
